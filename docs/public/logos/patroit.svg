@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Patroit 录入端 - 编辑/笔触图标 -->
+  <rect x="2" y="2" width="116" height="116" rx="24" fill="#eff6ff" stroke="#2563eb" stroke-width="3"/>
+  <path d="M35 85l-10 2 2-10 38-38 8 8-38 38z" fill="#2563eb" opacity="0.15"/>
+  <path d="M73 45l-8-8 5-5a2.828 2.828 0 014 0l4 4a2.828 2.828 0 010 4l-5 5z" fill="#2563eb"/>
+  <rect x="38" y="78" width="44" height="6" rx="3" fill="#7c3aed" opacity="0.3"/>
+</svg>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 140" fill="none">
+  <defs>
+    <linearGradient id="ray-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="ray-light" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 图标区 -->
+  <!-- 外环：跑道抽象 -->
+  <circle cx="60" cy="60" r="48" stroke="url(#ray-grad)" stroke-width="3.5" fill="none"/>
+  <circle cx="60" cy="60" r="36" stroke="url(#ray-grad)" stroke-width="1.5" fill="none" opacity="0.4"/>
+
+  <!-- 锐利切割线 — Ray -->
+  <path d="M28 28l64 64" stroke="url(#ray-grad)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M28 28l8-8" stroke="url(#ray-light)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M92 92l8 8" stroke="#7c3aed" stroke-width="2.5" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- 运动弧线 — Sport / 跑道弯道 -->
+  <path d="M88 40c-8-12-24-16-36-8" stroke="url(#ray-light)" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- 中心点 — 精准/数据 -->
+  <circle cx="60" cy="60" r="4.5" fill="url(#ray-grad)"/>
+
+  <!-- 文字区 -->
+  <text x="130" y="54" font-family="'PingFang SC','Microsoft YaHei','Noto Sans SC',sans-serif" font-size="34" font-weight="800" fill="#1e293b" letter-spacing="4">锐赛体育</text>
+  <text x="130" y="88" font-family="'Inter','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="600" fill="#64748b" letter-spacing="8">RAYSPORT</text>
+  <rect x="130" y="96" width="28" height="2.5" rx="1.25" fill="url(#ray-grad)"/>
+</svg>

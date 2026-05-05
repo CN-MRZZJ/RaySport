@@ -1,0 +1,13 @@
+{
+  "name": "raysport",
+  "version": "1.0.0",
+  "description": "锐赛体育智慧平台 RaySport 官方网站",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
