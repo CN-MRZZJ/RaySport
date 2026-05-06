@@ -1,20 +1,140 @@
-/* ===== RaySport 品牌色 ===== */
-:root {
-  --vp-c-brand-1: #2563eb;
-  --vp-c-brand-2: #3b82f6;
-  --vp-c-brand-3: #1d4ed8;
-  --vp-c-brand-soft: rgba(37, 99, 235, 0.14);
+/* ============================================
+   RaySport — "Velocity Track"
+   Racing Crimson · Cool Slate · Precision Amber
+   灵感：赛道计时器 · 电子记分牌 · 发令灯
 
+   采用 VitePress 官方 CSS 自定义属性体系，
+   覆盖品牌色 / 中性色 / 功能色 / Hero 区，
+   完整支持浅色 / 暗色双模。
+   ============================================ */
+
+/* =================================================================
+   §1  CSS 自定义属性（VitePress 官方配色模式）
+   ================================================================= */
+
+:root {
+  /* ---- Brand: Racing Crimson ---- */
+  --vp-c-brand-1: #E11D48;
+  --vp-c-brand-2: #F43F5E;
+  --vp-c-brand-3: #BE123C;
+  --vp-c-brand-soft: rgba(225, 29, 72, 0.12);
+
+  /* ---- Neutral: Cool Slate ---- */
+  --vp-c-bg: #FFFFFF;
+  --vp-c-bg-alt: #F7F8FA;
+  --vp-c-bg-elv: #FFFFFF;
+  --vp-c-bg-soft: #F7F8FA;
+  --vp-c-border: #C8CAD4;
+  --vp-c-divider: #E2E4EB;
+  --vp-c-gutter: #E2E4EB;
+  --vp-c-text-1: rgba(20, 20, 38, 0.92);
+  --vp-c-text-2: rgba(20, 20, 38, 0.62);
+  --vp-c-text-3: rgba(20, 20, 38, 0.40);
+  --vp-c-text-4: rgba(20, 20, 38, 0.22);
+
+  /* ---- Functional: Semantic Palette ---- */
+  --vp-c-green-1: #059669;
+  --vp-c-green-2: #10B981;
+  --vp-c-green-3: #047857;
+  --vp-c-green-soft: rgba(5, 150, 105, 0.12);
+  --vp-c-yellow-1: #D97706;
+  --vp-c-yellow-2: #F59E0B;
+  --vp-c-yellow-3: #B45309;
+  --vp-c-yellow-soft: rgba(217, 119, 6, 0.12);
+  --vp-c-red-1: #DC2626;
+  --vp-c-red-2: #EF4444;
+  --vp-c-red-3: #B91C1C;
+  --vp-c-red-soft: rgba(220, 38, 38, 0.12);
+  --vp-c-purple-1: #7C3AED;
+  --vp-c-purple-2: #8B5CF6;
+  --vp-c-purple-3: #6D28D9;
+  --vp-c-purple-soft: rgba(124, 58, 237, 0.12);
+  --vp-c-indigo-1: #4F46E5;
+  --vp-c-indigo-2: #6366F1;
+  --vp-c-indigo-3: #4338CA;
+  --vp-c-indigo-soft: rgba(79, 70, 229, 0.12);
+
+  /* ---- Custom Block ---- */
+  --vp-c-tip-1: var(--vp-c-brand-1);
+  --vp-c-tip-2: var(--vp-c-brand-2);
+  --vp-c-tip-3: var(--vp-c-brand-3);
+  --vp-c-tip-soft: var(--vp-c-brand-soft);
+  --vp-c-warning-1: var(--vp-c-yellow-1);
+  --vp-c-warning-2: var(--vp-c-yellow-2);
+  --vp-c-warning-3: var(--vp-c-yellow-3);
+  --vp-c-warning-soft: var(--vp-c-yellow-soft);
+  --vp-c-danger-1: var(--vp-c-red-1);
+  --vp-c-danger-2: var(--vp-c-red-2);
+  --vp-c-danger-3: var(--vp-c-red-3);
+  --vp-c-danger-soft: var(--vp-c-red-soft);
+
+  /* ---- Home Hero ---- */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --vp-home-hero-name-background: linear-gradient(120deg, #E11D48 0%, #BE123C 50%, #F43F5E 100%);
 }
 
-/* ===== 首页英雄区增强 ===== */
+/* =================================================================
+   §2  暗色模式
+   ================================================================= */
+
+.dark {
+  /* Brand — Luminous Rose（提亮以避免在深色背景上发闷） */
+  --vp-c-brand-1: #FB7185;
+  --vp-c-brand-2: #FDA4AF;
+  --vp-c-brand-3: #E11D48;
+  --vp-c-brand-soft: rgba(251, 113, 133, 0.16);
+
+  /* Neutral — Deep Charcoal */
+  --vp-c-bg: #09090E;
+  --vp-c-bg-alt: #13131C;
+  --vp-c-bg-elv: #1B1B26;
+  --vp-c-bg-soft: #1B1B26;
+  --vp-c-border: #2E2E3C;
+  --vp-c-divider: #1C1C28;
+  --vp-c-gutter: #000000;
+  --vp-c-text-1: rgba(243, 243, 248, 0.90);
+  --vp-c-text-2: rgba(243, 243, 248, 0.58);
+  --vp-c-text-3: rgba(243, 243, 248, 0.34);
+  --vp-c-text-4: rgba(243, 243, 248, 0.16);
+
+  /* Functional（暗色下提亮） */
+  --vp-c-green-1: #34D399;
+  --vp-c-green-2: #6EE7B7;
+  --vp-c-green-3: #059669;
+  --vp-c-green-soft: rgba(52, 211, 153, 0.14);
+  --vp-c-yellow-1: #FBBF24;
+  --vp-c-yellow-2: #FCD34D;
+  --vp-c-yellow-3: #D97706;
+  --vp-c-yellow-soft: rgba(251, 191, 36, 0.14);
+  --vp-c-red-1: #F87171;
+  --vp-c-red-2: #FCA5A5;
+  --vp-c-red-3: #DC2626;
+  --vp-c-red-soft: rgba(248, 113, 113, 0.14);
+  --vp-c-purple-1: #A78BFA;
+  --vp-c-purple-2: #C4B5FD;
+  --vp-c-purple-3: #7C3AED;
+  --vp-c-purple-soft: rgba(167, 139, 250, 0.14);
+  --vp-c-indigo-1: #818CF8;
+  --vp-c-indigo-2: #A5B4FC;
+  --vp-c-indigo-3: #4F46E5;
+  --vp-c-indigo-soft: rgba(129, 140, 248, 0.14);
+
+  /* Home Hero */
+  --vp-home-hero-name-background: linear-gradient(120deg, #FB7185 0%, #FDA4AF 40%, #F43F5E 80%);
+}
+
+/* =================================================================
+   §3  首页英雄区
+   ================================================================= */
+
 .home-hero-info {
   max-width: 720px !important;
 }
 
-/* ===== 产品卡片网格 ===== */
+/* =================================================================
+   §4  产品卡片网格
+   ================================================================= */
+
 .product-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -30,29 +150,56 @@
   }
 }
 
-/* ===== 产品卡片 ===== */
 .product-card {
   display: block;
   background: var(--vp-c-bg-soft);
   border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  padding: 32px 24px;
+  border-radius: 14px;
+  padding: 36px 28px;
   text-align: center;
   text-decoration: none;
   color: inherit;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+  position: relative;
+  overflow: hidden;
 }
 
+/* 卡片顶部色条 — 分别使用品牌色 / 靛蓝 / 琥珀金 */
+.product-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  border-radius: 0 0 3px 3px;
+  transition: width 0.25s;
+}
+
+.product-card:nth-child(1)::before { background: var(--vp-c-brand-1); }
+.product-card:nth-child(2)::before { background: var(--vp-c-indigo-1); }
+.product-card:nth-child(3)::before { background: var(--vp-c-yellow-1); }
+
 .product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  border-color: var(--vp-c-brand-2);
   text-decoration: none;
 }
 
+.dark .product-card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+.product-card:hover::before {
+  width: 56px;
+}
+
 .product-card .logo-placeholder {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 18px;
 }
 
 .product-card .logo-placeholder img {
@@ -63,50 +210,63 @@
 
 .product-card h3 {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-weight: 700;
+  margin-bottom: 6px;
 }
 
 .product-card .subtitle {
   font-size: 13px;
-  color: var(--vp-c-text-2);
-  margin-bottom: 12px;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  margin-bottom: 14px;
+  letter-spacing: 0.02em;
 }
 
 .product-card p {
   font-size: 14px;
   color: var(--vp-c-text-2);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .product-card .action {
   display: inline-block;
-  margin-top: 16px;
+  margin-top: 18px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--vp-c-brand-1);
   text-decoration: none;
+  transition: color 0.15s;
 }
 
 .product-card .action:hover {
-  text-decoration: underline;
+  color: var(--vp-c-brand-2);
+  text-decoration: none;
 }
 
-/* ===== 平台标语区 ===== */
+/* =================================================================
+   §5  平台标语区
+   ================================================================= */
+
 .platform-intro {
   max-width: 800px;
   margin: 0 auto;
-  padding: 64px 24px;
+  padding: 64px 24px 32px;
   text-align: center;
 }
 
 .platform-intro h2 {
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: linear-gradient(120deg, #E11D48 0%, #BE123C 50%, #F43F5E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .platform-intro h2 {
+  background: linear-gradient(120deg, #FB7185 0%, #FDA4AF 40%, #F43F5E 80%);
+  -webkit-background-clip: text;
   background-clip: text;
 }
 
@@ -116,45 +276,10 @@
   line-height: 1.8;
 }
 
-/* ===== 特性列表 ===== */
-.features {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1152px;
-  margin: 0 auto;
-  padding: 0 24px 64px;
-}
+/* =================================================================
+   §6  子项目详情页
+   ================================================================= */
 
-@media (max-width: 768px) {
-  .features {
-    grid-template-columns: 1fr;
-  }
-}
-
-.feature-item {
-  text-align: center;
-  padding: 24px;
-}
-
-.feature-item .icon {
-  font-size: 36px;
-  margin-bottom: 12px;
-}
-
-.feature-item h4 {
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.feature-item p {
-  font-size: 14px;
-  color: var(--vp-c-text-2);
-  line-height: 1.6;
-}
-
-/* ===== 子项目详情页 ===== */
 .project-page {
   max-width: 800px;
   margin: 0 auto;
@@ -182,15 +307,219 @@
 
 .project-header h1 {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 800;
+  color: var(--vp-c-text-1);
 }
 
 .project-header .role-tag {
   display: inline-block;
   font-size: 13px;
+  font-weight: 600;
   color: var(--vp-c-brand-1);
   background: var(--vp-c-brand-soft);
-  padding: 4px 12px;
+  padding: 4px 14px;
   border-radius: 20px;
   margin-top: 8px;
+  letter-spacing: 0.02em;
+}
+
+/* =================================================================
+   §7  平台介绍文档区
+   ================================================================= */
+
+.intro-doc {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 0 24px 64px;
+}
+
+.intro-doc h2 {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.intro-doc h3 {
+  font-size: 19px;
+  font-weight: 700;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.intro-doc p {
+  font-size: 15px;
+  color: var(--vp-c-text-2);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.intro-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.intro-doc table th,
+.intro-doc table td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.intro-doc table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* =================================================================
+   §8  核心优势
+   ================================================================= */
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin: 24px 0 32px;
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    grid-template-columns: 1fr;
+  }
+}
+
+.adv-item {
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 22px 26px;
+  transition: border-color 0.2s;
+}
+
+.adv-item:hover {
+  border-color: var(--vp-c-brand-1);
+}
+
+.adv-item p {
+  font-size: 14px;
+  color: var(--vp-c-text-2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =================================================================
+   §9  截图占位框
+   ================================================================= */
+
+.screenshot-placeholder,
+.img-placeholder {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  background: var(--vp-c-bg-soft);
+  border: 2px dashed var(--vp-c-divider);
+  border-radius: 10px;
+  margin: 24px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.screenshot-placeholder::after,
+.img-placeholder::after {
+  content: "📷 图片占位 — 请替换为实际截图";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: var(--vp-c-text-3);
+  white-space: nowrap;
+}
+
+/* =================================================================
+   §10  详情页表格
+   ================================================================= */
+
+.project-page table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 24px;
+  font-size: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-page table th,
+.project-page table td {
+  border: 1px solid var(--vp-c-divider);
+  padding: 10px 16px;
+  text-align: left;
+}
+
+.project-page table th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+}
+
+/* =================================================================
+   §11  宣传手册按钮
+   ================================================================= */
+
+.download-brochure {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff !important;
+  background: var(--vp-c-brand-1);
+  border-radius: 8px;
+  text-decoration: none !important;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.download-brochure:hover {
+  background: var(--vp-c-brand-3);
+  text-decoration: none !important;
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* =================================================================
+   §12  Mermaid 图表居中
+   ================================================================= */
+
+.intro-doc .mermaid,
+.project-page .mermaid {
+  display: flex;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+/* =================================================================
+   §13  自定义容器
+   ================================================================= */
+
+.vp-doc .custom-block.tip {
+  border-color: var(--vp-c-brand-1);
+}
+
+.vp-doc .custom-block.warning {
+  border-color: var(--vp-c-yellow-1);
+}
+
+.vp-doc .custom-block.info {
+  border-color: var(--vp-c-indigo-1);
+}
+
+/* =================================================================
+   §14  页脚
+   ================================================================= */
+
+.VPFooter {
+  border-top: 1px solid var(--vp-c-divider) !important;
 }
